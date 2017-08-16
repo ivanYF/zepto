@@ -1,11 +1,13 @@
 /* Zepto v1.2.0 - zepto event ajax form ie - zeptojs.com/license */
-(function(global, factory) {
+(function(global, factory) { // zepto 对amd 的支持
   if (typeof define === 'function' && define.amd)
     define(function() { return factory(global) })
   else
     factory(global)
 }(this, function(window) {
   var Zepto = (function() {
+
+    // 变量初始化
   var undefined, key, $, classList, emptyArray = [], concat = emptyArray.concat, filter = emptyArray.filter, slice = emptyArray.slice,
     document = window.document,
     elementDisplay = {}, classCache = {},
@@ -24,8 +26,11 @@
     tableRow = document.createElement('tr'),
     containers = {
       'tr': document.createElement('tbody'),
-      'tbody': table, 'thead': table, 'tfoot': table,
-      'td': tableRow, 'th': tableRow,
+      'tbody': table, 
+      'thead': table, 
+      'tfoot': table,
+      'td': tableRow, 
+      'th': tableRow,
       '*': document.createElement('div')
     },
     readyRE = /complete|loaded|interactive/,
